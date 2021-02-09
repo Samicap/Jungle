@@ -3,6 +3,14 @@ class UsersController < ApplicationController
   def new
   end
 
+  # def authenticate_with_credentials(email, password)
+  #   if User.where("email = ?, password = ?", :email, :password) != nil
+  #     return User.find_by_email(:email)
+  #   else
+  #     return nil
+  # end
+  
+
   def create
     user = User.new(user_params)
     if user.save
